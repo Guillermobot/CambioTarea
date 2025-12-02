@@ -1,0 +1,17 @@
+int x = 10;
+float y = 3.14;
+int contador = 0;
+
+if (x > 5) {
+    while (contador < x) {
+        if (contador % 2 == 0) {
+            print(contador);
+        }
+        contador = contador + 1;
+    }
+}
+
+{
+    int local = 100;
+    print(local, x, y);
+}

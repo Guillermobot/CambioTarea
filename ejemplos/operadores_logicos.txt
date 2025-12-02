@@ -1,0 +1,9 @@
+int a = 5;
+int b = 10;
+if (a < b && b > 0) {
+    print(a, b);
+}
+while (a < b) {
+    a = a + 1;
+}
+print(a);
