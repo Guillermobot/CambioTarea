@@ -23,25 +23,25 @@ class Program(ASTNode):
 
 @dataclass
 class DeclStmt(ASTNode):
-    type_name: str  # 'int', 'float', 'string'
-    var_name: str
+    type_name: str = ""  # 'int', 'float', 'string'
+    var_name: str = ""
     init_value: Optional[ASTNode] = None
 
 @dataclass
 class AssignStmt(ASTNode):
-    var_name: str
-    value: ASTNode
+    var_name: str = ""
+    value: Optional[ASTNode] = None
 
 @dataclass
 class IfStmt(ASTNode):
-    condition: ASTNode
-    then_stmt: ASTNode
+    condition: Optional[ASTNode] = None
+    then_stmt: Optional[ASTNode] = None
     else_stmt: Optional[ASTNode] = None
 
 @dataclass
 class WhileStmt(ASTNode):
-    condition: ASTNode
-    body: ASTNode
+    condition: Optional[ASTNode] = None
+    body: Optional[ASTNode] = None
 
 @dataclass
 class PrintStmt(ASTNode):
@@ -53,22 +53,22 @@ class Block(ASTNode):
 
 @dataclass
 class BinaryOp(ASTNode):
-    operator: str
-    left: ASTNode
-    right: ASTNode
+    operator: str = ""
+    left: Optional[ASTNode] = None
+    right: Optional[ASTNode] = None
 
 @dataclass
 class UnaryOp(ASTNode):
-    operator: str
-    operand: ASTNode
+    operator: str = ""
+    operand: Optional[ASTNode] = None
 
 @dataclass
 class Identifier(ASTNode):
-    name: str
+    name: str = ""
 
 @dataclass
 class Literal(ASTNode):
-    value: str
+    value: str = ""
 
 # ============================================
 # PARSER
