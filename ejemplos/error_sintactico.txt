@@ -1,0 +1,3 @@
+int frenado = 60;         
+int tiempo = 80;
+int velocidad = 10

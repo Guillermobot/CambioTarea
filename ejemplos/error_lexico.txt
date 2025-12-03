@@ -1,0 +1,4 @@
+int velocidad = 80;
+int rpm = 3000;
+
+rpm = rpm @ 500;  

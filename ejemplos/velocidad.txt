@@ -1,0 +1,14 @@
+Velocidad y RPM 
+
+
+int velocidad = 60;
+int limite = 80;
+int rpm = 2000;
+
+if (velocidad < limite) {
+    print(velocidad);
+}
+
+while (rpm < 4000) {
+    rpm = rpm + 500;
+}

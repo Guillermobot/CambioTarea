@@ -41,7 +41,7 @@ def compile_source(source_code: str, source_name: str = "<input>"):
     # FASE 1: ANÁLISIS LÉXICO
     # ========================================
     print("\n" + "=" * 80)
-    print("📝 FASE 1: ANÁLISIS LÉXICO")
+    print("-- FASE 1: ANÁLISIS LÉXICO")
     print("=" * 80)
     
     lexer = Lexer(source_code)
@@ -70,7 +70,7 @@ def compile_source(source_code: str, source_name: str = "<input>"):
     # FASE 2: ANÁLISIS SINTÁCTICO
     # ========================================
     print("\n" + "=" * 80)
-    print("🔍 FASE 2: ANÁLISIS SINTÁCTICO")
+    print("-- FASE 2: ANÁLISIS SINTÁCTICO")
     print("=" * 80)
     
     parser = Parser(tokens)
@@ -90,7 +90,7 @@ def compile_source(source_code: str, source_name: str = "<input>"):
     # FASE 3: ANÁLISIS SEMÁNTICO
     # ========================================
     print("\n" + "=" * 80)
-    print("🧠 FASE 3: ANÁLISIS SEMÁNTICO")
+    print("-- FASE 3: ANÁLISIS SEMÁNTICO")
     print("=" * 80)
     
     semantic = SemanticAnalyzer()
@@ -117,7 +117,7 @@ def compile_source(source_code: str, source_name: str = "<input>"):
         for warning in semantic.warnings:
             print(f"  ⚠️  {warning}")
     
-    print("\n🎉 El programa es sintáctica y semánticamente correcto")
+    print("\n----- El programa es sintáctica y semánticamente correcto------")
     print("=" * 80)
     
     return True
