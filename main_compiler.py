@@ -117,7 +117,7 @@ def compile_source(source_code: str, source_name: str = "<input>"):
         for warning in semantic.warnings:
             print(f"  ⚠️  {warning}")
     
-    print("\n----- El programa es sintáctica y semánticamente correcto------")
+    print("\n El programa es sintáctica y semánticamente correcto")
     print("=" * 80)
     
     return True
